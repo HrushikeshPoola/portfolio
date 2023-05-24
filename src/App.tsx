@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+import NavigationBar from "./components/NavigationBar/navigation";
+import Page from "./components/Page/page";
+import Listview from "./components/ListView/Listview";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <NavigationBar/>
+
+        <Router>
+            <Routes>
+                <Route path="/" Component={Listview} />
+                <Route path="/about/:id" Component={Page} />
+            </Routes>
+        </Router>
     </div>
   );
 }
 
 export default App;
+
+/*
+* Need to decide on components
+*  Paragraph Component
+*
+* */
