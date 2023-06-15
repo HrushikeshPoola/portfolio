@@ -11,19 +11,18 @@ import {
     FaCode,
     FaEthereum, FaGoogle, FaReact,
 } from "react-icons/fa";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export default function Home() {
     const [seconds, setSeconds] = useState(0);
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setSeconds((prevSeconds) => prevSeconds + 1);
-        }, 1000);
-
-        return () => {
-            clearInterval(interval);
-        };
-    }, []);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setSeconds((prevSeconds) => prevSeconds + 1);
+    //     }, 1000);
+    //
+    //     return () => {
+    //         clearInterval(interval);
+    //     };
+    // }, []);
     const content = [
         {
             url : "/react/",
@@ -70,7 +69,7 @@ export default function Home() {
                                 {/*Welcome to Poola's portfolio website! I'm a full stack developer with expertise in front-end design, back-end development, and database management, passionate about building distributed software systems for seamless web applications*/}
                                 <FaCode className="p-2 m-2" style={{ fontSize: '8rem' }}/>
                                 <FaArrowRight className="p-2 m-2" style={{ fontSize: '4rem', color:"#bbb" }}/>
-                                {lang(seconds)}
+                                {/*{lang(seconds)}*/}
                             </h2>
                         </Col>
                         <Col className="col col-lg-6">
