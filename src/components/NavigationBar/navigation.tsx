@@ -26,10 +26,8 @@ export default function NavigationBar() {
                             </Col>
                         </Row>
                     </Container>
-
                 </div>
             </nav>
         </div>
-
     );
 }
