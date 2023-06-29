@@ -65,12 +65,12 @@ export default function Home() {
                 <Container fluid className="flex-row" style={{height:"80vh", width:"100vw"}}>
                     <Row className="h-100">
                         <Col className="col col-lg-12 h-100 d-flex flex-column justify-content-center">
-                            <h2 className="text-sm-center text-md-center text-lg-center">
-                                {/*Welcome to Poola's portfolio website! I'm a full stack developer with expertise in front-end design, back-end development, and database management, passionate about building distributed software systems for seamless web applications*/}
+                            <div className="text-sm-center text-md-center text-lg-center">
                                 <FaCode className="p-2 m-2" style={{ fontSize: '8rem' }}/>
-                                <FaArrowRight className="p-2 m-2" style={{ fontSize: '4rem', color:"#bbb" }}/>
+                                {/*<FaArrowRight className="p-2 m-2" style={{ fontSize: '4rem', color:"#bbb" }}/>*/}
+                                {/*<p className="text-center">Welcome to Poola's space!!! I'm a full stack developer with expertise in front-end design, back-end development, and database management, passionate about building distributed software systems for seamless web applications</p>*/}
                                 {/*{lang(seconds)}*/}
-                            </h2>
+                            </div>
                         </Col>
                         <Col className="col col-lg-6">
 

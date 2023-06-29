@@ -4,14 +4,6 @@ import {FaCode, FaGithub, FaLinkedin} from "react-icons/fa";
 export default function NavigationBar() {
     return (
         <div>
-            {/*<nav className="navbar navbar-light bg-light" style={{boxShadow:'2px 2px 2px #ddd'}}>*/}
-            {/*    <div className="container-fluid">*/}
-            {/*        <a className="navbar-brand" href="#">*/}
-            {/*            /!*<span><Avatar size={'40px'} style={{padding : '2px'}} name="Hrushikesh Poola" round /></span>*!/*/}
-            {/*            Hrushikesh Poola*/}
-            {/*        </a>*/}
-            {/*    </div>*/}
-            {/*</nav>*/}
             <nav className="navbar sticky-top navbar-light bg-light shadow">
                 <div className="container-fluid">
                     <Container>

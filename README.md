@@ -2,7 +2,7 @@
 
 ### Table of Contents for Software Development
 * Frontend
-  - React 
+  - React
   - Angular 
   - Typescript
 * Backend

@@ -5,6 +5,8 @@ import NavigationBar from "./components/NavigationBar/navigation";
 import Page from "./components/Page/page";
 import Listview from "./components/ListView/Listview";
 import Home from "./components/Home/Home";
+import {CardProps} from "./components/ListView/CardProps";
+import NavComponent from "./components/NavComponent";
 
 function App() {
   return (
@@ -12,9 +14,9 @@ function App() {
         <NavigationBar/>
         <Router>
             <Routes>
-                <Route path="/topics/" Component={Listview} />
                 <Route path="/" Component={Home} />
-                <Route path="/about/:id" Component={Page} />
+                <Route path="/:id" Component={Page} />
+                <Route path="/test" Component={NavComponent}/>
             </Routes>
         </Router>
     </div>

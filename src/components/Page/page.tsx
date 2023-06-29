@@ -1,30 +1,31 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import Paragraph from '../Paragraph/Paragraph'
-import Progressbar from "../Progressbar/Progressbar";
-import Content from "../Paragraph/Content";
-import logo from './logo.jpeg'
-import {useParams} from "react-router-dom";
+import {useParams} from 'react-router-dom';
+import Listview from "../ListView/Listview";
+import {ReactCardContent} from "../../Content/react"
+import Codeblock from "../Card/Codeblock";
+import {Container} from "react-bootstrap";
+let dataMap : Map<string, any[]> = new Map();
+
+dataMap.set("react", ReactCardContent)
+dataMap.set("angular", ReactCardContent)
+dataMap.set("solidity", ReactCardContent)
+dataMap.set("golang", ReactCardContent)
+
 
 function Page() {
-    const {params} = useParams()
-    // Accessing specific query parameters
-    console.log(params)
+    const { id } = useParams();
+    let cardsData = []
+    if (!id) {
+    } else {
+        const data = dataMap.get(id)
+        if (data === undefined) cardsData = []
+        else cardsData = data
+    }
+    console.log(cardsData)
     return (
         <>
-            {/*<Progressbar/>*/}
-            <p>{params}</p>
-            <Container>
-                <h1 style={{padding : '10px'}}>{params}</h1>
-                <div style={{overflow:"auto"}}>
-                    <Content type={'Paragraph'}/>
-                    <Content type={'ImageComponent'} link={logo}/>
-                    <Content type={'Paragraph'}/>
-                    <Content type={'Paragraph'}/>
-                    <Content type={'ImageComponent'} link={logo}/>
-                    <Content type={'Paragraph'}/>
-                </div>
-            </Container>
+            <Listview content ={cardsData} />
+            <Container><Codeblock code={"<Hello World>"}/></Container>
         </>
 
     );
