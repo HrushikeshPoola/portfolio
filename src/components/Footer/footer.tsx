@@ -1,15 +1,10 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import {tab} from "@testing-library/user-event/dist/tab";
-
-interface FooterProps {
-    // Define any additional props for the footer component
-}
 function Link(props : {text: string, url: string}) {
     return (<a href={props.url} className="text-light text-decoration-none p-2">{props.text}</a>);
 }
 
-const Footer: React.FC<FooterProps> = () => {
+const Footer: React.FC = () => {
     const references = [
         {
             text : 'Home',
