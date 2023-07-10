@@ -1,7 +1,7 @@
 import React from 'react'
 import {Col, Container, Row} from "react-bootstrap";
 import {FaCode, FaGithub, FaLinkedin} from "react-icons/fa";
-export default function NavigationBar() {
+export default function Header() {
     return (
         <div>
             <nav className="navbar sticky-top navbar-light bg-light shadow">
