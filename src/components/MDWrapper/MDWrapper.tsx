@@ -1,14 +1,13 @@
 import React from 'react';
-import BlogCard from "../Card/BlogCard";
-import ReactMarkdownWrapper from "../ReactMarkdownWrapper/ReactMarkdownWrapper";
-import ReactMarkdown from "react-markdown";
 import MarkdownRenderer from "../ReactMarkdownWrapper/ReactMarkdownWrapper";
-
+import { useParams } from 'react-router-dom';
 function MDWrapper(props : any) {
+    const { id } = useParams();
+    const path = id?.split("_").join("/") + ".md";
     return (
         <div className="container pt-4">
             <div className="row">
-                <MarkdownRenderer path="/md/test.md" />
+                <MarkdownRenderer path={"/md/" + path} />
             </div>
         </div>
     )

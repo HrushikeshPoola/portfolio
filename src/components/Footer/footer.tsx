@@ -8,19 +8,19 @@ const Footer: React.FC = () => {
     const references = [
         {
             text : 'Home',
-            url : './home'
+            url : './home/'
         },
         {
             text : 'About',
-            url : './about'
+            url : './about/'
         },
         {
             text : 'Projects',
-            url : './projects'
+            url : './projects/'
         },
         {
             text : 'Contact',
-            url : './contact'
+            url : './contact/'
         }
     ]
     const contactDetails = [

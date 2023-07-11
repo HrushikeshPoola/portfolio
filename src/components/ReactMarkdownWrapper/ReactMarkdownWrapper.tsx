@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-
+import remarkGfm from 'remark-gfm'
 const MarkdownRenderer = ({ path } : {path : string}) => {
     const [markdownContent, setMarkdownContent] = useState('');
 
@@ -18,7 +18,7 @@ const MarkdownRenderer = ({ path } : {path : string}) => {
         fetchMarkdownContent();
     }, [path]);
 
-    return <ReactMarkdown>{markdownContent}</ReactMarkdown>;
+    return <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdownContent}</ReactMarkdown>;
 };
 
 export default MarkdownRenderer;
